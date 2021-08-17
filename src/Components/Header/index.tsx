@@ -11,7 +11,7 @@ export function Header(){
       mt="4"
       px="6"
       alignItems="center"
-      bg="blackAlpha.100"
+     
     
     >
       <Text
@@ -19,7 +19,7 @@ export function Header(){
         fontWeight="bold"
         letterSpacing="tight"
         width = "64"
-        bg="orange"
+       
       >
         Dashgo
         <Text 
