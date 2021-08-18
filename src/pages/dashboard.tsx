@@ -54,7 +54,6 @@ const options = {
       opacityFrom:0.7,
       opacityTo:0.3
     }
-
   }
 }
 
