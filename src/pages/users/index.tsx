@@ -79,6 +79,24 @@ export default function UserList(){
                   04 de Janeiro de 2020
                 </Td>
               </Tr>
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="pink" />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold">
+                      Jonh Doe
+                    </Text>
+                    <Text fontSize="sm" color="gray.300">
+                      JonhDoe@gmail.com
+                    </Text>
+                  </Box>
+                </Td>
+                <Td>
+                  25 de Abril de 1987
+                </Td>
+              </Tr>
             </Tbody>
          </Table>
         <Pagination />

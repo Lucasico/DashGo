@@ -78,9 +78,7 @@ export default function UserCreate(){
                 Salvar
               </Button>
             </HStack>
-
           </Flex>
-
         </Box>
       </Flex>
     </Box>

@@ -68,14 +68,15 @@ const series = [
 export default function dashboard(){
   return (
     <>
-    <Flex direction="column" h="100vh">
-
+    <Flex direction="column" h="100vh" >
       <Header />
       <Flex 
+        direction="row"
         width="100%"
         maxWidth={1480}
         mx="auto"
         px="6"
+       
       >
         <Sidebar />
 

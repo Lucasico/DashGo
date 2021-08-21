@@ -27,12 +27,12 @@ export default function SignIn() {
           type="email"
           name="email"
           label="email"
-        />
-        <Input
-          type="password"
-          name="password"
-          label="Senha"
-        /> 
+         />
+         <Input
+           type="password"
+           name="password"
+           label="Senha"
+         /> 
        </Stack>
        <Button type="submit" marginTop="6" colorScheme="pink" size="lg">
          Entrar
