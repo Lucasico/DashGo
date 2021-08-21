@@ -1,3 +1,4 @@
+import {PaginationItem} from './Components/PaginationItem';
 import { Button, Stack, Box } from "@chakra-ui/react";
 
 export function Pagination() {
@@ -16,78 +17,10 @@ export function Pagination() {
         direction="row"
         spacing="2"
       >
-        <Button 
-          size="sm"
-          fontSize="xs"
-          width="4"
-          colorScheme="pink"
-          disabled
-          _disabled={{
-            bgColor:'pink.500',
-            cursor: 'default'
-          }}
-        >
-          1
-        </Button>
-        <Button 
-          size="sm"
-          fontSize="xs"
-          width="4"
-          bgColor="gray.700"
-          _hover={{
-            bgColor:'gray.500'
-          }}
-        >
-          2
-        </Button>
-        <Button 
-          size="sm"
-          fontSize="xs"
-          width="4"
-          bgColor="gray.700"
-          _hover={{
-            bgColor:'gray.500'
-          }}
-      
-        >
-          3
-        </Button>
-        <Button 
-          size="sm"
-          fontSize="xs"
-          width="4"
-          bgColor="gray.700"
-          _hover={{
-            bgColor:'gray.500'
-          }}
-      
-        >
-          4
-        </Button>
-        <Button 
-          size="sm"
-          fontSize="xs"
-          width="4"
-          bgColor="gray.700"
-          _hover={{
-            bgColor:'gray.500'
-          }}
-      
-        >
-          5
-        </Button>
-        <Button 
-          size="sm"
-          fontSize="xs"
-          width="4"
-          bgColor="gray.700"
-          _hover={{
-            bgColor:'gray.500'
-          }}
-      
-        >
-          6
-        </Button>
+        <PaginationItem isCurrent={false} number={1} />
+        <PaginationItem isCurrent={false} number={2} />
+        <PaginationItem isCurrent number={3} />
+        <PaginationItem isCurrent={false} number={4} />
       </Stack>
     </Stack>
   )
