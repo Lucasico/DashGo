@@ -1,10 +1,14 @@
-import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Text,Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
+import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Text,Tbody, Td, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
 import { RiAddLine } from "react-icons/ri";
 import { Header } from "../../Components/Header";
 import { Sidebar } from "../../Components/Sidebar";
 import { Pagination } from "../../Components/Pagination";
 export default function UserList(){
 
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true
+  })
   return(
     <Box>
       <Header />
@@ -49,20 +53,24 @@ export default function UserList(){
          <Table colorScheme="whiteAlpha">
             <Thead>
               <Tr>
-                <Th px="6" color="gray.300" width="8">
+                <Th px={["4","4","6"]} color="gray.300" width="8">
                   <Checkbox colorScheme="pink" />
                 </Th>
                 <Th>
                   Usuário
                 </Th>
-                <Th>
-                  Data de cadastro
-                </Th>
+               {
+                 isWideVersion && (
+                  <Th>
+                    Data de cadastro
+                  </Th>
+                 )
+               }
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
-                <Td px="6">
+                <Td  px={["4","4","6"]}>
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
@@ -75,12 +83,16 @@ export default function UserList(){
                     </Text>
                   </Box>
                 </Td>
-                <Td>
-                  04 de Janeiro de 2020
-                </Td>
+                {
+                  isWideVersion && (
+                    <Td>
+                      04 de Janeiro de 2020
+                    </Td>
+                  )
+                }
               </Tr>
               <Tr>
-                <Td px="6">
+                <Td px={["4","4","6"]}>
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
@@ -93,9 +105,13 @@ export default function UserList(){
                     </Text>
                   </Box>
                 </Td>
-                <Td>
-                  25 de Abril de 1987
-                </Td>
+                {
+                  isWideVersion && (
+                    <Td>
+                      04 de Janeiro de 2020
+                    </Td>
+                  )
+                }
               </Tr>
             </Tbody>
          </Table>

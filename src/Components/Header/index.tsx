@@ -35,10 +35,8 @@ export function Header(){
             onClick={onOpen}
             mr="2"
           >
-
+              
           </IconButton >
-
-
         )
       }
       <Logo />

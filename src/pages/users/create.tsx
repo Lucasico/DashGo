@@ -20,7 +20,7 @@ export default function UserCreate(){
          flex="1"
          borderRadius={8}
          bg="gray.800"
-         p="8"
+         p={["4","8"]}
         >
          
           <Heading 
@@ -38,10 +38,10 @@ export default function UserCreate(){
           {
             //Vstack add/modifiel spacing vertical
           }
-          <VStack spacing="8">
+          <VStack spacing={["4","8"]}>
             <SimpleGrid 
               minChildWidth="240px" 
-              spacing="8"
+              spacing={["4","8"]}
               w="100%"
             >
               <Input name="name" label="Nome Completo"/>
@@ -49,7 +49,7 @@ export default function UserCreate(){
             </SimpleGrid>
             <SimpleGrid 
               minChildWidth="240px" 
-              spacing="8"
+              spacing={["4","8"]}
               w="100%"
             >
               <Input name="password" type="password" label="Senha"/>
