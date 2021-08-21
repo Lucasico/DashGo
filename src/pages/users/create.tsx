@@ -2,6 +2,7 @@ import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Text,Tbody, Td, Th, 
 import { Header } from "../../Components/Header";
 import { Sidebar } from "../../Components/Sidebar";
 import {Input} from '../../Components/Form/Input'
+import Link from "next/link";
 export default function UserCreate(){
 
   return(
@@ -67,11 +68,14 @@ export default function UserCreate(){
             <HStack
               spacing="4"
             >
-              <Button
-                colorScheme="whiteAlpha"
-              >
-                Cancelar
-              </Button>
+              <Link href="/users" passHref>
+                <Button
+                  as = "a"
+                  colorScheme="whiteAlpha"
+                >
+                  Cancelar
+                </Button>
+              </Link>
               <Button
                 colorScheme="pink"
               >

@@ -73,6 +73,7 @@ export default function dashboard(){
       <Flex 
         direction="row"
         width="100%"
+        my="6"
         maxWidth={1480}
         mx="auto"
         px="6"
@@ -91,7 +92,7 @@ export default function dashboard(){
             p={["6","8"]}
             bg="gray.800"
             borderRadius={8}
-            pb={4}
+            pb="8"
           >
 
             <Text
