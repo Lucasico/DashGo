@@ -8,6 +8,10 @@ import { useEffect } from 'react';
 
 
 export default function SignIn() {
+  type SignInFormData = {
+    email: string;
+    password: string;
+  }
   const signFormSchema = yup.object().shape({
     email: yup.string().required('E-mail obrigatório').email('Formato de email inválido'),
     password: yup.string().required('Senha obrigatório').min(5, 'Tamanho minino de 5 dígitos').max(10, 'Tamanho máximo de 10 dígitos'),
@@ -15,7 +19,7 @@ export default function SignIn() {
     // number: yup.number().required('Campo obrigatório')
   })
 
-  const { register, handleSubmit, formState, setValue } = useForm({
+  const { register, handleSubmit, formState } = useForm({
     resolver:yupResolver(signFormSchema)
   })
 
@@ -23,10 +27,6 @@ export default function SignIn() {
 
   console.log('errorsForms', errorsForm)
   
-  type SignInFormData = {
-    email: string;
-    password: string;
-  }
 
   async function handleSignIn ( data:SignInFormData ){
     await new Promise(resolve => setTimeout(resolve, 2000))
@@ -70,7 +70,7 @@ export default function SignIn() {
            {...register('password')}
 
          /> 
-         <Input
+         {/* <Input
            type="number"
            name="number"
            label="number"
@@ -89,7 +89,7 @@ export default function SignIn() {
           placeholder="Digite aqui a descrição do produto"
           {...register('textArea')}
          />
-        
+         */}
        </Stack>
        <Button 
          type="submit"

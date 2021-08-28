@@ -1,5 +1,9 @@
-import { extendTheme } from '@chakra-ui/react'
-
+import { extendTheme, ThemeConfig } from '@chakra-ui/react'
+// import { mode } from "@chakra-ui/theme-tools"
+const config: ThemeConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: true,
+}
 export const theme = extendTheme({
   //CUSTOMIZANDO O ESTILO PADRÃO
   colors: {
@@ -22,11 +26,18 @@ export const theme = extendTheme({
   },
   //SETANDO O ESTILO PADRÃO
   styles: {
-    global: {
-      body: {
-        bg: 'gray.900',
-        color: 'gray.50'
-      }
-    }
-  }
+    global: (props) => ({
+      "html, body": {
+        color: props.colorMode === "dark" ? "white" : "black",
+        p: {
+          color: props.colorMode === "dark" ? "white" : "black",
+        },
+        button: {
+          color: props.colorMode === "dark" ? "white" : "black",
+        },
+
+      },
+    }),
+  },
+  config
 })

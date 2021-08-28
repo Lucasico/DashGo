@@ -12,7 +12,6 @@ export function SeachBox(){
       marginLeft="6"
       maxWidth={400}
       alignSelf="center"
-      color = "gray.200"
       bg ="gray.800"
       position = "relative"
       borderRadius="full"
