@@ -1,33 +1,30 @@
 
-import Link from "next/link";
-import { useQuery } from 'react-query';
-import { api } from "../../services/api";
-import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Text,Tbody, Td, Th, Thead, Tr, useBreakpointValue, Spinner } from "@chakra-ui/react";
-import { RiAddLine } from "react-icons/ri";
+import { userUsers } from "../../services/hooks/userUsers";
 import { Header } from "../../Components/Header";
 import { Sidebar } from "../../Components/Sidebar";
 import { Pagination } from "../../Components/Pagination";
+import { RiAddLine } from "react-icons/ri";
+import Link from "next/link";
+import { 
+  Box, 
+  Button, 
+  Checkbox, 
+  Flex, 
+  Heading, 
+  Icon, 
+  Table, 
+  Text, 
+  Tbody, 
+  Td, 
+  Th, 
+  Thead, 
+  Tr, 
+  useBreakpointValue, 
+  Spinner
+} from "@chakra-ui/react";
 export default function UserList(){
 
-  const {data, isLoading, error, isFetching} = useQuery('users',async() => {
-    const {data} = await api.get('users')
-    
-    const users = data.users.map(user => {
-      return {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR',{
-          day:"2-digit",
-          month:'long',
-          year:'numeric' 
-        })
-      }
-    });
-
-    return users;
-    
-  })
+  const {data, isLoading, error, isFetching} = userUsers()
 
   const isWideVersion = useBreakpointValue({
     base: false,
